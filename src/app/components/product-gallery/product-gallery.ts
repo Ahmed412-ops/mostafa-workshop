@@ -20,19 +20,19 @@ const MOCK_PRODUCTS: WorkshopProduct[] = [
     id: 'dw-1',
     category: 'doors-windows',
     title: 'باب رئيسي خشب سويدي مع زخرفة CNC',
-    imageSrc: 'assets/images/doors-1.svg',
+    imageSrc: 'assets/images/doors-1.png',
   },
   {
     id: 'dw-2',
     category: 'doors-windows',
     title: 'شباك ألمنيوم وخشب مدمج — عزل حراري',
-    imageSrc: 'assets/images/doors-2.svg',
+    imageSrc: 'assets/images/doors-2.png',
   },
   {
     id: 'dw-3',
     category: 'doors-windows',
     title: 'مكتبة مدخل مع باب مخفي',
-    imageSrc: 'assets/images/doors-3.svg',
+    imageSrc: 'assets/images/doors-3.png',
   },
   {
     id: 'lv-1',
