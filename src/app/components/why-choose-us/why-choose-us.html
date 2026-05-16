@@ -1,0 +1,68 @@
+<section
+  id="why-us"
+  class="scroll-mt-24 border-b border-wood-200 bg-gradient-to-b from-white to-cream-100 py-16 sm:py-20"
+  aria-labelledby="why-heading"
+>
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <h2 id="why-heading" class="text-center text-3xl font-extrabold text-wood-950 sm:text-4xl">
+      لماذا ورشة المصطفى؟
+    </h2>
+    <p class="mx-auto mt-3 max-w-2xl text-center text-lg text-ink-muted">
+      نؤمن أن التفاصيل الصغيرة تصنع فرقاً كبيراً في منزلك.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      @for (item of reasons; track item.title) {
+        <div
+          class="rounded-2xl border border-wood-200 bg-cream-50/80 p-6 shadow-card backdrop-blur-sm transition hover:border-wood-300 hover:shadow-lift"
+        >
+          <div
+            class="flex h-12 w-12 items-center justify-center rounded-xl bg-wood-800 text-cream-50"
+            aria-hidden="true"
+          >
+            @switch (item.icon) {
+              @case ('wood') {
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 19h16M6 19V9l6-4 6 4v10M9 19v-6h6v6"
+                  />
+                </svg>
+              }
+              @case ('design') {
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 5h16M4 12h10M4 19h7M17 12l3 3 3-3"
+                  />
+                </svg>
+              }
+              @case ('time') {
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="9" stroke-width="1.8" />
+                  <path stroke-width="1.8" stroke-linecap="round" d="M12 7v6l4 2" />
+                </svg>
+              }
+              @case ('experience') {
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3l2 4 4 .5-3 3 .8 4.5L12 13l-3.8 2 .8-4.5-3-3 4-.5L12 3z"
+                  />
+                </svg>
+              }
+            }
+          </div>
+          <h3 class="mt-4 text-lg font-bold text-wood-950">{{ item.title }}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-muted">{{ item.body }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

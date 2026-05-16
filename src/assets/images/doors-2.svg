@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="5H1) *,1J(J)">
+  <defs>
+    <linearGradient id="b" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4c3229"/>
+      <stop offset="100%" stop-color="#e0cbb3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#b)"/>
+  <text x="400" y="310" text-anchor="middle" fill="#fdfcfa" font-family="Tajawal, sans-serif" font-size="32" font-weight="700">4('(JC</text>
+</svg>

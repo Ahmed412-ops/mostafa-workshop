@@ -1,0 +1,44 @@
+<footer id="contact" class="scroll-mt-24 bg-wood-950 text-cream-100">
+  <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <p class="text-lg font-extrabold text-white">ورشة المصطفى</p>
+        <p class="mt-2 max-w-sm text-sm leading-relaxed text-wood-200">
+          نجارة وموبيليا — أبواب، شبابيك، مطابخ وغرف نوم بتشطيب راقٍ وخدمة موثوقة.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-sm font-bold uppercase tracking-wide text-wood-300">تواصل</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>
+            <span class="text-wood-400">الهاتف:</span>
+            <a class="ms-1 font-semibold text-white hover:underline" [href]="contact.phoneTelHref">
+              {{ contact.displayPhone }}
+            </a>
+            <span class="mt-1 block text-xs text-wood-400">(رقم عرض — عدّله من ملف الإعدادات)</span>
+          </li>
+          <li>
+            <span class="text-wood-400">فيسبوك:</span>
+            <a class="ms-1 font-semibold text-white hover:underline" [href]="contact.facebookUrl" target="_blank" rel="noopener noreferrer">
+              صفحة الورشة
+            </a>
+          </li>
+          <li>
+            <span class="text-wood-400">الموقع:</span>
+            <a class="ms-1 font-semibold text-white hover:underline" [href]="contact.mapsUrl" target="_blank" rel="noopener noreferrer">
+              خرائط جوجل
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2 lg:col-span-1">
+        <p class="text-sm font-bold uppercase tracking-wide text-wood-300">حقوق النشر</p>
+        <p class="mt-3 text-sm text-wood-200">
+          © {{ year }} ورشة المصطفى. جميع الحقوق محفوظة.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

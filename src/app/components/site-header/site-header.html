@@ -1,0 +1,90 @@
+<header
+  class="sticky top-0 z-50 border-b border-wood-200/80 bg-cream-50/95 shadow-sm backdrop-blur-md"
+>
+  <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
+    <!-- شعار / اسم الورشة (بداية السطر في RTL = يمين الشاشة) -->
+    <a
+      href="#top"
+      class="group flex shrink-0 items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-wood-500"
+      (click)="closeMenu()"
+    >
+      <span
+        class="flex h-10 w-10 items-center justify-center rounded-lg bg-wood-800 text-sm font-extrabold text-cream-100 shadow-inner ring-1 ring-wood-600/40"
+        aria-hidden="true"
+        >م</span
+      >
+      <span class="flex flex-col leading-tight">
+        <span class="text-lg font-extrabold tracking-tight text-wood-950">ورشة المصطفى</span>
+        <span class="text-xs font-medium text-ink-soft">نجارة · موبيليا · ديكور</span>
+      </span>
+    </a>
+
+    <!-- روابط سطح المكتب (وسط) -->
+    <nav
+      class="hidden flex-1 items-center justify-center gap-8 text-sm font-semibold text-ink-muted md:flex"
+      aria-label="التنقل الرئيسي"
+    >
+      <a class="transition hover:text-wood-700" href="#top">الرئيسية</a>
+      <a class="transition hover:text-wood-700" href="#gallery">أعمالنا</a>
+      <a class="transition hover:text-wood-700" href="#why-us">لماذا نحن</a>
+      <a class="transition hover:text-wood-700" href="#contact">تواصل معنا</a>
+    </nav>
+
+    <!-- زر اتصال (نهاية السطر في RTL = يسار الشاشة) -->
+    <div class="ms-auto flex items-center gap-2 md:ms-0">
+      <a
+        [href]="callUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden rounded-full bg-wood-800 px-4 py-2.5 text-sm font-bold text-cream-50 shadow-md transition hover:bg-wood-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-wood-500 md:inline-flex"
+      >
+        اتصل الآن
+      </a>
+
+      <button
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-wood-200 bg-white text-wood-900 shadow-sm md:hidden"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="mobile-nav"
+        aria-label="فتح القائمة"
+      >
+        @if (menuOpen()) {
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        } @else {
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        }
+      </button>
+    </div>
+  </div>
+
+  <!-- قائمة الجوال -->
+  @if (menuOpen()) {
+    <div
+      id="mobile-nav"
+      class="border-t border-wood-200 bg-cream-50 px-4 py-4 md:hidden"
+      role="dialog"
+      aria-modal="true"
+    >
+      <nav class="flex flex-col gap-3 text-base font-semibold text-ink" aria-label="تنقل الجوال">
+        <a class="rounded-lg px-3 py-2 hover:bg-wood-100" href="#top" (click)="closeMenu()">الرئيسية</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-wood-100" href="#gallery" (click)="closeMenu()">أعمالنا</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-wood-100" href="#why-us" (click)="closeMenu()">لماذا نحن</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-wood-100" href="#contact" (click)="closeMenu()">تواصل معنا</a>
+        <a
+          class="mt-2 inline-flex justify-center rounded-full bg-wood-800 px-4 py-3 text-center font-bold text-cream-50"
+          [href]="callUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          (click)="closeMenu()"
+        >
+          اتصل الآن
+        </a>
+      </nav>
+    </div>
+  }
+</header>
