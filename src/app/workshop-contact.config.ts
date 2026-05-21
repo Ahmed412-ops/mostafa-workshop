@@ -17,7 +17,7 @@ export const WORKSHOP_CONTACT = {
 
   /** روابط وهمية — استبدلها بروابطك */
   facebookUrl: 'https://www.facebook.com/share/1Crtn1wvXH/',
-  mapsUrl: 'https://maps.google.com/?q=your+location',
+  mapsUrl: 'https://maps.app.goo.gl/BLFM6FjRCAktETtz9',
 
   /** رابط اتصال سريع من الشريط (يمكن أن يكون tel: أو واتساب) */
   primaryCallUrl: 'https://wa.me/2012250593',
