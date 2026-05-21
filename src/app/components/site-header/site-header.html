@@ -2,24 +2,25 @@
   class="sticky top-0 z-50 border-b border-wood-200/80 bg-cream-50/95 shadow-sm backdrop-blur-md"
 >
   <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
-    <!-- شعار / اسم الورشة (بداية السطر في RTL = يمين الشاشة) -->
     <a
       href="#top"
-      class="group flex shrink-0 items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-wood-500"
+      class="group flex shrink-0 items-center gap-3 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-wood-500"
       (click)="closeMenu()"
     >
-      <span
-        class="flex h-10 w-10 items-center justify-center rounded-lg bg-wood-800 text-sm font-extrabold text-cream-100 shadow-inner ring-1 ring-wood-600/40"
-        aria-hidden="true"
-        >م</span
-      >
+      <img 
+        src="assets/images/logo.jpg" 
+        alt="لوجو ورشة المصطفى" 
+        class="h-11 w-auto object-contain transition duration-300 group-hover:scale-105 filter drop-shadow-sm"
+        loading="eager"
+        decoding="async"
+      />
+      
       <span class="flex flex-col leading-tight">
         <span class="text-lg font-extrabold tracking-tight text-wood-950">ورشة المصطفى</span>
         <span class="text-xs font-medium text-ink-soft">نجارة · موبيليا · ديكور</span>
       </span>
     </a>
 
-    <!-- روابط سطح المكتب (وسط) -->
     <nav
       class="hidden flex-1 items-center justify-center gap-8 text-sm font-semibold text-ink-muted md:flex"
       aria-label="التنقل الرئيسي"
@@ -30,7 +31,6 @@
       <a class="transition hover:text-wood-700" href="#contact">تواصل معنا</a>
     </nav>
 
-    <!-- زر اتصال (نهاية السطر في RTL = يسار الشاشة) -->
     <div class="ms-auto flex items-center gap-2 md:ms-0">
       <a
         [href]="callUrl"
@@ -62,7 +62,6 @@
     </div>
   </div>
 
-  <!-- قائمة الجوال -->
   @if (menuOpen()) {
     <div
       id="mobile-nav"

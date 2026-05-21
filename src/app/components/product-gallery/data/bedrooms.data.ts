@@ -25,5 +25,21 @@ export const BEDROOMS_PROJECTS: WorkshopProject[] = [
       'assets/images/bedroom-grey/3.jpg',
       'assets/images/bedroom-grey/4.jpg',
     ]
+  },
+  {
+    id: 'children-room',
+    category: 'bedrooms',
+    title: 'غرفة الأطفال',
+    description: 'غرفتين اطفال مرفقين بمكتب و دولابين',
+    images: [
+      'assets/images/bedroom-children-1/main.jpg',
+      'assets/images/bedroom-children-1/1.jpg',
+      'assets/images/bedroom-children-1/2.jpg',
+      'assets/images/bedroom-children-1/3.jpg',
+      'assets/images/bedroom-children-1/4.jpg',
+      'assets/images/bedroom-children-1/5.jpg',
+      'assets/images/bedroom-children-1/6.jpg',
+      'assets/images/bedroom-children-1/7.jpg',
+    ]
   }
 ];

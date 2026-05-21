@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { buildWhatsAppInquiryUrl } from '../../workshop-contact.config';
 import { MOCK_PROJECTS } from './data/products.index'; // السطر السحري للاستيراد البسيط
 
-export type ProductCategoryId = 'doors-windows' | 'living' | 'bedrooms' | 'kitchens';
+export type ProductCategoryId = 'doors-windows' | 'living' | 'bedrooms' | 'kitchens' | 'dressings';
 
 export interface WorkshopProject {
   id: string;
@@ -34,6 +34,7 @@ export class ProductGallery {
     { id: 'living', label: 'الركن والأنتريهات' },
     { id: 'bedrooms', label: 'غرف النوم والشباب' },
     { id: 'kitchens', label: 'المطابخ والديكورات' },
+    { id: 'dressings', label: 'الدريسينج' },
   ];
 
   readonly filteredProjects = computed(() => {
